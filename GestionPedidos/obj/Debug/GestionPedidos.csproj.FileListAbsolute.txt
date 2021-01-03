@@ -1,0 +1,15 @@
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\bin\Debug\GestionPedidos.exe.config
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\bin\Debug\GestionPedidos.exe
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\bin\Debug\GestionPedidos.pdb
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\obj\Debug\GestionPedidos.csprojAssemblyReference.cache
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\obj\Debug\MainWindow.g.cs
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\obj\Debug\App.g.cs
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\obj\Debug\GestionPedidos_MarkupCompile.cache
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\obj\Debug\GestionPedidos_MarkupCompile.lref
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\obj\Debug\MainWindow.baml
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\obj\Debug\GestionPedidos.g.resources
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\obj\Debug\GestionPedidos.Properties.Resources.resources
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\obj\Debug\GestionPedidos.csproj.GenerateResource.cache
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\obj\Debug\GestionPedidos.csproj.CoreCompileInputs.cache
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\obj\Debug\GestionPedidos.exe
+C:\Users\David Güere\source\repos\GestionPedidosSolution\GestionPedidos\obj\Debug\GestionPedidos.pdb
