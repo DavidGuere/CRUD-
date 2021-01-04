@@ -5,19 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestionPedidos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="CRUD demo app" Height="500" Width="830" Activated="Window_Activated">
     <Grid>
-        <Label Content="Clients" HorizontalAlignment="Left" Margin="73,102,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <ListBox Name="ClientList" HorizontalAlignment="Left" Height="192" Margin="35,147,0,0" VerticalAlignment="Top" Width="164" SelectionChanged="ClientList_SelectionChanged"/>
-        <Label Content="Order Date" HorizontalAlignment="Left" Margin="270,107,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <ListBox Name="OrderList" HorizontalAlignment="Left" Height="192" Margin="226,147,0,0" VerticalAlignment="Top" Width="164"/>
-        <Label Content="All orders" HorizontalAlignment="Left" Margin="541,107,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <ListBox Name="AllOrders" HorizontalAlignment="Left" Height="192" Margin="420,147,0,0" VerticalAlignment="Top" Width="364"/>
-        <Button Content="Delete item" HorizontalAlignment="Left" Margin="541,344,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button Content="Add client" HorizontalAlignment="Left" Margin="10,323,0,0" VerticalAlignment="Top" Width="100" Height="45" Click="Button_Click_2"/>
-        <Button Content="Remove client" HorizontalAlignment="Left" Margin="124,349,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <TextBox Name="NewClient" HorizontalAlignment="Left" Height="23" Margin="35,387,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Add a new user" HorizontalAlignment="Left" Margin="35,369,0,0" VerticalAlignment="Top"/>
+        <Label Content="Clients" HorizontalAlignment="Left" Margin="65,36,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <ListBox Name="ClientList" HorizontalAlignment="Left" Height="192" Margin="10,81,0,0" VerticalAlignment="Top" Width="212" SelectionChanged="ClientList_SelectionChanged"/>
+        <Label Content="Order Date" HorizontalAlignment="Left" Margin="290,41,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <ListBox Name="OrderList" HorizontalAlignment="Left" Height="192" Margin="246,81,0,0" VerticalAlignment="Top" Width="164"/>
+        <Label Content="All orders" HorizontalAlignment="Left" Margin="561,41,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <ListBox Name="AllOrders" HorizontalAlignment="Left" Height="192" Margin="440,81,0,0" VerticalAlignment="Top" Width="364"/>
+        <Button Content="Delete item" HorizontalAlignment="Left" Margin="561,278,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Add client" HorizontalAlignment="Left" Margin="27,357,0,0" VerticalAlignment="Top" Width="75" Height="19" Click="Button_Click_2"/>
+        <Button Content="Remove client" HorizontalAlignment="Left" Margin="124,283,0,0" VerticalAlignment="Top" Width="98" Click="Button_Click_1"/>
+        <TextBox Name="NewClient" HorizontalAlignment="Left" Height="23" Margin="27,329,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164"/>
+        <Label Content="Add a new user" HorizontalAlignment="Left" Margin="27,303,0,0" VerticalAlignment="Top"/>
+        <Button Content="Update Client" HorizontalAlignment="Left" Margin="10,284,0,0" VerticalAlignment="Top" Width="102" Click="Update_Client"/>
 
     </Grid>
 </Window>

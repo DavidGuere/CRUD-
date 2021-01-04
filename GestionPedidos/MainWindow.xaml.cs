@@ -61,29 +61,33 @@ namespace GestionPedidos
         {
             try
             {
-                string ask = "select * from [Order] O inner join Client C on C.id = O.cClient where C.id = @ClientID";
-
-                SqlCommand SQLCommand = new SqlCommand(ask, mySQLConection);
-
-                SqlDataAdapter AdaptTableToWindow = new SqlDataAdapter(SQLCommand);
-
-                // Storing data from server
-                using (AdaptTableToWindow)
+                if (ClientList.SelectedValue != null)  // solution for exeption after deleting
                 {
+                    string ask = "select * from [Order] O inner join Client C on C.id = O.cClient where C.id = @ClientID";
 
-                    SQLCommand.Parameters.AddWithValue("@ClientID", ClientList.SelectedValue);
-                    DataTable OrderTable = new DataTable();
+                    SqlCommand SQLCommand = new SqlCommand(ask, mySQLConection);
 
-                    // fill data to OrderTable
-                    AdaptTableToWindow.Fill(OrderTable);
+                    SqlDataAdapter AdaptTableToWindow = new SqlDataAdapter(SQLCommand);
 
-                    // Selection table column to display
-                    OrderList.DisplayMemberPath = "DateOrder";
-                    // Selecting key
-                    OrderList.SelectedValuePath = "id";
-                    // Data source
-                    OrderList.ItemsSource = OrderTable.DefaultView;
+                    // Storing data from server
+                    using (AdaptTableToWindow)
+                    {
+
+                        SQLCommand.Parameters.AddWithValue("@ClientID", ClientList.SelectedValue);
+                        DataTable OrderTable = new DataTable();
+
+                        // fill data to OrderTable
+                        AdaptTableToWindow.Fill(OrderTable);
+
+                        // Selection table column to display
+                        OrderList.DisplayMemberPath = "DateOrder";
+                        // Selecting key
+                        OrderList.SelectedValuePath = "id";
+                        // Data source
+                        OrderList.ItemsSource = OrderTable.DefaultView;
+                    }
                 }
+                
             }
             catch (Exception e)
             {
@@ -169,13 +173,13 @@ namespace GestionPedidos
         {
             try
             {
-                string ask = "delete from [Client] where values id =@clientID";
+                string ask = "delete from [Client] where id=@clientID";
 
                 SqlCommand SQLcommand = new SqlCommand(ask, mySQLConection);
 
                 mySQLConection.Open();
 
-                SQLcommand.Parameters.AddWithValue("@clientID", OrderList.SelectedValue);
+                SQLcommand.Parameters.AddWithValue("@clientID", ClientList.SelectedValue);
 
                 SQLcommand.ExecuteNonQuery();
 
@@ -213,6 +217,51 @@ namespace GestionPedidos
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void Update_Client(object sender, RoutedEventArgs e)
+        {
+            if (ClientList.SelectedValue != null)
+            {
+                UpdateClient UpdateClientWindow = new UpdateClient((int)ClientList.SelectedValue);
+
+                try
+                {
+                    string task = "select (name) from [Client] where id=@idOfClient";
+
+                    SqlCommand SQLselectClient = new SqlCommand(task, mySQLConection);
+
+                    SQLselectClient.Parameters.AddWithValue("@idOfClient", ClientList.SelectedValue);
+
+                    SqlDataAdapter AdaptTableToWindow = new SqlDataAdapter(SQLselectClient);
+
+                    using (AdaptTableToWindow)
+                    {
+                        DataTable client = new DataTable();
+
+                        AdaptTableToWindow.Fill(client);
+
+                        UpdateClientWindow.clientToUpdate.Text = client.Rows[0]["name"].ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+                UpdateClientWindow.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Select a client to update");
+            }
+
+
+        }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            ShowClients();
         }
     }
 }

@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Anaconda3\CSharp_learn\GestionPedidosSolution\GestionPedidos\obj\Debug\
+C:\Anaconda3\CSharp_learn\GestionPedidosSolution\GestionPedidos\obj\Release\
 GestionPedidos
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Anaconda3\CSharp_learn\GestionPedidosSolution\GestionPedidos\App.xaml
 2300691367
 
@@ -16,5 +16,5 @@ C:\Anaconda3\CSharp_learn\GestionPedidosSolution\GestionPedidos\App.xaml
 141066371409
 MainWindow.xaml;UpdateClient.xaml;
 
-False
+True
 
